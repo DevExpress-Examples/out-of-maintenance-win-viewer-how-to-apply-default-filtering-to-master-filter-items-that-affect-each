@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Form1.cs](./CS/WinViewer_MutualDefaultFiltering/Form1.cs) (VB: [Form1.vb](./VB/WinViewer_MutualDefaultFiltering/Form1.vb))
+<!-- default file list end -->
 # Win Viewer - How to apply default filtering to master filter items that affect each other
 
 
