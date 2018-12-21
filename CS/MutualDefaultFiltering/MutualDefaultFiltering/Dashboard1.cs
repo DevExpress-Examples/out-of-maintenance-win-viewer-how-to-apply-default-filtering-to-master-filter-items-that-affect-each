@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 using DevExpress.DataAccess;
 using DevExpress.DashboardCommon;
 
-namespace WinViewer_MutualDefaultFiltering {
-    public partial class Dashboard1 : DevExpress.DashboardCommon.Dashboard {
-        public Dashboard1() {
+namespace MutualDefaultFiltering
+{
+    public partial class Dashboard1 : DevExpress.DashboardCommon.Dashboard
+    {
+        public Dashboard1()
+        {
             InitializeComponent();
         }
     }

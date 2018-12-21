@@ -1,5 +1,7 @@
-﻿namespace WinViewer_MutualDefaultFiltering {
-    partial class Form1 {
+﻿namespace MutualDefaultFiltering
+{
+    partial class Form1
+    {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -9,8 +11,10 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing) {
-            if (disposing && (components != null)) {
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -22,7 +26,8 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             this.dashboardViewer1 = new DevExpress.DashboardWin.DashboardViewer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dashboardViewer1)).BeginInit();
@@ -30,23 +35,22 @@
             // 
             // dashboardViewer1
             // 
-            this.dashboardViewer1.CustomDBSchemaProviderEx = null;
-            this.dashboardViewer1.DashboardSource = "WinViewer_MutualDefaultFiltering.Dashboard1";
+            this.dashboardViewer1.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.dashboardViewer1.Appearance.Options.UseBackColor = true;
             this.dashboardViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dashboardViewer1.Location = new System.Drawing.Point(0, 0);
             this.dashboardViewer1.Name = "dashboardViewer1";
-            this.dashboardViewer1.Size = new System.Drawing.Size(523, 278);
+            this.dashboardViewer1.Size = new System.Drawing.Size(800, 450);
             this.dashboardViewer1.TabIndex = 0;
-            this.dashboardViewer1.MasterFilterDefaultValues += new DevExpress.DashboardCommon.MasterFilterDefaultValuesEventHandler(this.dashboardViewer1_MasterFilterDefaultValues);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 278);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dashboardViewer1);
             this.Name = "Form1";
-            this.Text = "Dashboard Viewer";
+            this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dashboardViewer1)).EndInit();
             this.ResumeLayout(false);
 
@@ -55,7 +59,6 @@
         #endregion
 
         private DevExpress.DashboardWin.DashboardViewer dashboardViewer1;
-
     }
 }
 

@@ -6,11 +6,16 @@
 # Win Viewer - How to apply default filtering to master filter items that affect each other
 
 
-The DashboardViewer control allows you to apply default filtering using the following events
+The following DashboardViewer events allow you to apply default master filtering: 
 
-* <a href="https://documentation.devexpress.com/#Dashboard/DevExpressDashboardWinDashboardViewer_MasterFilterDefaultValuestopic">MasterFilterDefaultValues</a>.
-* <a href="https://documentation.devexpress.com/#Dashboard/DevExpressDashboardWinDashboardViewer_RangeFilterDefaultValuetopic">RangeFilterDefaultValue</a>.<br>- <strong>FilterElementDefaultValues</strong> (v16.1 and earlier).
-* <strong>SingleFilterDefaultValue</strong> (v16.1 and earlier).<br>If your dashboard contains several master filter items that affect each other, filtering may not be applied to some items due to architectural limitations of DevExpress Dashboard. Let's consider the following scenario: a dashboard contains the Grid and Card dashboard items that affect each other. If you handle the MasterFilterDefaultValues event for both items, filtering will not be applied to the <em>Extended Price</em> column of Grid 1:<br><strong>code:</strong><br>
+* [MasterFilterDefaultValues](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWin.DashboardViewer.MasterFilterDefaultValues)
+* [RangeFilterDefaultValue](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWin.DashboardViewer.RangeFilterDefaultValue)
+
+> If the [Neutral Filter mode](https://docs.devexpress.com/Dashboard/400262/main-features/interactivity/neutral-filter-mode) is enabled, master filters apply as expected and the workaround described in this document is not relevant.
+
+If your dashboard contains several **master filter** items that **affect each other** and the Neutral Filter mode is **disabled**, default filter values may not be applied to some items due to technical limitations. Consider the following scenario: a dashboard contains the Grid and Card dashboard items that affect each other. If you handle the MasterFilterDefaultValues event for both items, filtering is not applied to the grid's _Extended Price_ column.
+
+**code:**
 
 
 ```cs
@@ -22,9 +27,13 @@ The DashboardViewer control allows you to apply default filtering using the fol
         }
 ```
 
+**result:**
 
- <strong>result:</strong><br><img src="https://raw.githubusercontent.com/DevExpress-Examples/win-viewer-how-to-apply-default-filtering-to-master-filter-items-that-affect-each-other-t474844/16.2.3+/media/43572027-e15b-11e6-80bf-00155d62480c.png"><br><br><br>As a workaround, you need to call the <a href="https://documentation.devexpress.com/#Dashboard/DevExpressDashboardWinDashboardViewer_SetMasterFiltertopic">SetMasterFilter</a> method for Cards 1. In this case, filtering will be applied correctly:<br><strong>code:</strong><br>
+![](https://raw.githubusercontent.com/DevExpress-Examples/win-viewer-how-to-apply-default-filtering-to-master-filter-items-that-affect-each-other-t474844/16.2.3+/media/43572027-e15b-11e6-80bf-00155d62480c.png)
 
+To remedy the situation, call the [SetMasterFilter](https://documentation.devexpress.com/#Dashboard/DevExpressDashboardWinDashboardViewer_SetMasterFiltertopic) method to apply a filter to the _Cards 1_ item:
+
+**code:**
 
 ```cs
 dashboardViewer1.SetMasterFilter("cardDashboardItem1", new List<object>() { "UK" });
@@ -37,8 +46,7 @@ dashboardViewer1.SetMasterFilter("cardDashboardItem1", new List<object>() { "UK"
 ```
 
 
-<strong>result:</strong><br><img src="https://raw.githubusercontent.com/DevExpress-Examples/win-viewer-how-to-apply-default-filtering-to-master-filter-items-that-affect-each-other-t474844/16.2.3+/media/6014919f-e157-11e6-80bf-00155d62480c.png">
+**result:**
 
-<br/>
-
+![](https://raw.githubusercontent.com/DevExpress-Examples/win-viewer-how-to-apply-default-filtering-to-master-filter-items-that-affect-each-other-t474844/16.2.3+/media/6014919f-e157-11e6-80bf-00155d62480c.png)
 
