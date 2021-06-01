@@ -1,9 +1,9 @@
 <!-- default file list -->
 *Files to look at*:
 
-* [Form1.cs](./CS/WinViewer_MutualDefaultFiltering/Form1.cs) (VB: [Form1.vb](./VB/WinViewer_MutualDefaultFiltering/Form1.vb))
+* [Form1.cs](./CS/MutualDefaultFiltering/Form1.cs) (VB: [Form1.vb](./VB/MutualDefaultFiltering/Form1.vb))
 <!-- default file list end -->
-# How to apply default filtering to master filter items that affect each other
+# How to Apply Default Filtering to Master Filter Items that Affect Each Other
 
 
 The following DashboardViewer events allow you to apply default master filtering: 
@@ -49,4 +49,13 @@ dashboardViewer1.SetMasterFilter("cardDashboardItem1", new List<object>() { "UK"
 **result:**
 
 ![](https://raw.githubusercontent.com/DevExpress-Examples/win-viewer-how-to-apply-default-filtering-to-master-filter-items-that-affect-each-other-t474844/16.2.3+/media/6014919f-e157-11e6-80bf-00155d62480c.png)
+
+## Documentation
+
+- [Master Filtering](https://docs.devexpress.com/Dashboard/116912)
+
+## More Examples 
+
+- [How to Initialize Master Filters in Dashboard Viewer](https://github.com/DevExpress-Examples/how-to-apply-default-filtering-to-master-filters-in-dashboardviewer-t329583)
+- [How to Set Master Filter in Dashboard Viewer](https://github.com/DevExpress-Examples/how-to-apply-master-filtering-in-dashboardviewer-e5097)
 
