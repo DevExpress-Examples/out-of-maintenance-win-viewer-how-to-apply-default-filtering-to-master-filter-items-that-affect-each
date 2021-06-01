@@ -6,7 +6,7 @@
 # How to Apply Default Filtering to Master Filter Items that Affect Each Other
 
 
-The following DashboardViewer events allow you to apply default master filtering: 
+The following Dashboard Viewer events allow you to apply default master filtering: 
 
 * [MasterFilterDefaultValues](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWin.DashboardViewer.MasterFilterDefaultValues)
 * [RangeFilterDefaultValue](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWin.DashboardViewer.RangeFilterDefaultValue)
