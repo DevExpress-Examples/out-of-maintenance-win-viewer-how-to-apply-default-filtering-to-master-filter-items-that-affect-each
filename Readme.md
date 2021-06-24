@@ -3,7 +3,7 @@
 
 * [Form1.cs](./CS/MutualDefaultFiltering/Form1.cs) (VB: [Form1.vb](./VB/MutualDefaultFiltering/Form1.vb))
 <!-- default file list end -->
-# How to Apply Default Filtering to Master Filter Items that Affect Each Other
+# Dashboard for WinForms - How to Apply Default Filtering to Master Filter Items that Affect Each Other
 
 
 The following Dashboard Viewer events allow you to apply default master filtering: 
